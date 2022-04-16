@@ -48,3 +48,19 @@
     margin-right : 10px;
     padding:0px;
 }
+.tickmarks{
+    display: inline-block;
+}
+.wizyt{
+    height: 150px;
+    width: 500px;
+}
+.slider-wrapper{
+    display: inline-block;
+  width: 150px;
+  height: 20px;
+  padding: 0;
+}
+.form-line-label{
+    font-weight: bold;
+}

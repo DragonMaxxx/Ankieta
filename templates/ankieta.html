@@ -14,9 +14,9 @@
             <style>
                 .form-all:before { background: none;}
               </style>
-              <ul>
+              <ul style="list-style-type:none;">
               <li class="form-line" data-type="control" id="id_1">
-                <label class="form-line" id="label_1" for="input_1"> Wiek </label>
+                <label class="form-line-label" id="label_1" for="input_1"><strong> Wiek</strong> </label>
                 <div id="cid_1" class="form-input" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_1" data-component="radio">                    
                       <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_0" name="age" value="Ponizej 18" />
@@ -31,10 +31,10 @@
                 </div>
               </li>
               <li class="form-line" data-type="control" id="id_2">
-                <label class="form-line" id="label_2" for="input_2"> Plec </label>
+                <label class="form-line-label" id="label_2" for="input_2"><strong>Plec</strong>  </label>
                 <div id="cid_2" class="form-input" data-layout="full">
-                  <div class="form-single-column" role="group" aria-labelledby="label_1" data-component="radio">                    
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="plec" value="Kobieta" />
+                  <div class="form-single-column" role="group" aria-labelledby="label_2" data-component="radio">                    
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="pleć" value="Kobieta" />
                       <label id="label_input_2_0" for="input_2_0"> Kobieta </label><br>
                       <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_1" name="pleć" value="Mężczyzna" />
                       <label id="label_input_2_1" for="input_2_1"> Mężczyzna </label><br>
@@ -45,10 +45,78 @@
                   </div>
                 </div>
               </li>
-              </ul>>
+              <li class="form-line" data-type="control" id="id_3">
+                <label class="form-line-label" id="label_3" for="input_3"><strong> Jaki jest twój status zawodowy?</strong> </label>
+                <div id="cid_3" class="form-input" data-layout="full">
+                  <div class="form-single-column" role="group" aria-labelledby="label_3" data-component="radio">                    
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_0" name="zawod" value="Pracujący" />
+                      <label id="label_input_3_0" for="input_3_0"> Pracujący </label><br>
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_1" name="zawod" value="Przedsiębiorca" />
+                      <label id="label_input_3_1" for="input_3_1"> Przedsiębiorca </label><br>
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_2" name="zawod" value="Bezrobotny" />
+                      <label id="label_input_3_2" for="input_3_3"> Bezrobotny </label><br>
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_3" name="zawod" value="Emeryt" />
+                      <label id="label_input_3_3" for="input_3_3"> Emeryt </label><br>
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_4" name="zawod" value="Student" />
+                      <label id="label_input_3_4" for="input_3_4"> Student </label><br>
+              <li class="form-line" data-type="control" id="id_4">
+                <label class="form-line-label" id="label_4" for="input_4">Wykształcenie</label>
+                <div id="cid_4" class="form-input" data-layout="full">
+                  <div class="form-single-column" role="group" aria-labelledby="label_4" data-component="drop-down">
+                      <select name="wyksztalcenie">
+                        <option value="brak" selected="selected">Brak</option>
+                        <option value="podstawowe">Podstawowe</option>
+                        <option value="średnie">Średnie</option>
+                        <option value="wyższe">Wyższe</option>
+                      </select>
+              </li>
+              <li class="form-line" data-type="control" id="id_5">
+                <label class="form-line-label" id="label_5" for="input_5">Zamieszkanie</label>
+                <div id="cid_5" class="form-input" data-layout="full">
+                  <div class="form-single-column" role="group" aria-labelledby="label_5" data-component="drop-down">
+                      <select name="zamieszkanie">
+                        <option value="brak" selected="selected">Brak</option>
+                        <option value="wieś">Wieś</option>
+                        <option value="miasto_do_50">Miasto do 50 tys.</option>
+                        <option value="miasto_50_150">Miasto od 50 do 150 tys.</option>
+                        <option value="miasto_150_500">Miasto od 150 do 500 tys.</option>
+                        <option value="miasto_500">Miasto powyżej tys.</option>
+                      </select>
+                  </div>
+                </div>
+              </li>
+              </ul>
         </div>
-        <div></div>
-        <div></div>
+        <div>
+          <label class="form-line-label" data-type="control" id="id_6">Czy korzysta Pan/Pani z wizyt lekarskich?</label>
+          <div id="cid_3" class="form-input" data-layout="full">
+            <div class="form-single-column" role="group" aria-labelledby="label_3" data-component="radio">
+              <input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_0" name="czy_wizyta" value="Tak" />
+                      <label id="label_input_6_0" for="input_6_0"> Tak </label>
+                      <input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_1" name="czy_wizyta" value="Nie" />
+                      <label id="label_input_6_1" for="input_6_1"> Nie </label>
+          </div>
+          </div>       
+        </div>
+        <div>
+          <ul style="list-style-type:none;">
+            <li class="form-line" data-type="control" id="id_6">
+              <label class="form-line=label" id="label_6" for="input_6">Jak często?</label>
+              <div id="cid_6" class="form-input" data-layout="full">
+                <div class="range-wrap" role="group" aria-labelledby="label_5" data-component="range">
+                  <div class="range-value" id="rangeV"></div>
+                  <input id="range" type="range" min="1" max="5" value="3" step="1">
+                <label for="wizyty"></label>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <ul style="list-style-type:none;">
+
+          </ul>
+        </div>
     </form>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
