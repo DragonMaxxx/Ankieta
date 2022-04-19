@@ -125,7 +125,15 @@
         </div>
         <div class="tab" style="display: none;">
           <ul style="list-style-type:none;">
-
+            <li>
+              <label class="form-line=label" id="label_10" for="input_10"><strong>W jakiej dziedzinie spotkał/a się Pan/Pani z największą innowacyjnością w medycynie?</strong></label><br>
+              <input type="checkbox" id="gdzie_innowacja_1" name="gdzie_innowacja_1" value="Dziedzina_leczenia">
+              <label for="gdzie_innowacja_1"> Dziedzina leczenia</label><br>
+              <input type="checkbox" id="gdzie_innowacje_2" name="gdzie_innowacje_2" value="Infrastruktura_diagnostyczna">
+              <label for="gdzie_innowacje_2"> Infrastruktura diagnostyczna</label><br>
+              <input type="checkbox" id="gdzie_innowacje_3" name="gdzie_innowacje_3" value="profilaktyka_promocja_tele">
+              <label for="gdzie_innowacje_3"> Profilaktyka i promocja zdrowia z wykorzytniem rozwiązań teleinformatycznych</label><br>
+            </li>
           </ul>
         </div>
         <div style="overflow:auto;">
@@ -140,6 +148,8 @@
           <span class="step"></span>
         </div>
     </form>
+
+    <script src="javaScript.js"></script>
 
 <script>var currentTab = 0; // Current tab is set to be the first tab (0)
   showTab(currentTab); // Display the current tab
@@ -213,5 +223,6 @@
     //... and adds the "active" class to the current step:
     x[n].className += " active";
   }</script>
+  
 </body>
 </html>
