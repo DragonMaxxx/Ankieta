@@ -7,7 +7,7 @@
     <title>Ankieta</title>
 </head>
 <body>
-    <form id="regForm" action="" method="post">
+    <form id="regForm" action='ankieta.php' method="post">
       <style>
         .form-all:before { background: none;}
       </style>
@@ -17,13 +17,13 @@
                 <label class="form-line-label" id="label_1" for="input_1"><strong> Wiek</strong> </label>
                 <div id="cid_1" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_1" data-component="radio">                    
-                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_0" name="age" value="Ponizej 18" />
+                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_0" name="wiek" value="Ponizej 18" />
                       <label id="label_input_1_0" for="input_1_0"> Ponizej 18 </label><br>
-                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="age" value="18-25" />
+                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="wiek" value="18-25" />
                       <label id="label_input_1_1" for="input_1_1"> 18 - 25 </label><br>
-                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="age" value="26-45" />
+                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="wiek" value="26-45" />
                       <label id="label_input_1_2" for="input_1_2"> 26 - 45 </label><br>
-                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="age" value="Powyzej 45" />
+                      <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_1" name="wiek" value="Powyzej 45" />
                       <label id="label_input_1_3" for="input_1_3"> Powyzej 45 </label><br>
                   </div>
                 </div>
@@ -34,11 +34,11 @@
                   <div class="form-single-column" role="group" aria-labelledby="label_2" data-component="radio">                    
                       <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="plec" value="Kobieta" />
                       <label id="label_input_2_0" for="input_2_0"> Kobieta </label><br>
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_1" name="plec" value="Mężczyzna" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_1" name="plec" value="Mezczyzna" />
                       <label id="label_input_2_1" for="input_2_1"> Mężczyzna </label><br>
                       <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_2" name="plec" value="Inna" />
                       <label id="label_input_2_2" for="input_2_3"> Inna </label><br>
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_3" name="plec" value="Wole nie odpowiadać" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_3" name="plec" value="Wole nie odpowiadac" />
                       <label id="label_input_2_3" for="input_2_3"> Wole nie odpowiadać </label><br>
                   </div>
                 </div>
@@ -47,9 +47,9 @@
                 <label class="form-line-label" id="label_3" for="input_3"><strong> Jaki jest twój status zawodowy?</strong> </label>
                 <div id="cid_3" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_3" data-component="radio">                    
-                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_0" name="zawod" value="Pracujący" />
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_0" name="zawod" value="Pracujacy" />
                       <label id="label_input_3_0" for="input_3_0"> Pracujący </label><br>
-                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_1" name="zawod" value="Przedsiębiorca" />
+                      <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_1" name="zawod" value="Przedsiebiorca" />
                       <label id="label_input_3_1" for="input_3_1"> Przedsiębiorca </label><br>
                       <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_2" name="zawod" value="Bezrobotny" />
                       <label id="label_input_3_2" for="input_3_3"> Bezrobotny </label><br>
@@ -64,8 +64,8 @@
                       <select name="wyksztalcenie">
                         <option value="brak" selected="selected">Brak</option>
                         <option value="podstawowe">Podstawowe</option>
-                        <option value="średnie">Średnie</option>
-                        <option value="wyższe">Wyższe</option>
+                        <option value="srednie">Średnie</option>
+                        <option value="wyzsze">Wyższe</option>
                       </select>
               </li>
               <li class="" data-type="control" id="id_5">
@@ -74,7 +74,7 @@
                   <div class="form-single-column" role="group" aria-labelledby="label_5" data-component="drop-down">
                       <select name="zamieszkanie">
                         <option value="brak" selected="selected">Brak</option>
-                        <option value="wieś">Wieś</option>
+                        <option value="wies">Wieś</option>
                         <option value="miasto_do_50">Miasto do 50 tys.</option>
                         <option value="miasto_50_150">Miasto od 50 do 150 tys.</option>
                         <option value="miasto_150_500">Miasto od 150 do 500 tys.</option>

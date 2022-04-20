@@ -2,10 +2,22 @@
 // database connection code
 // $con = mysqli_connect('localhost', 'database_user', 'database_password','database');
 
-$con = mysqli_connect('127.0.0.1', 'root', '','db_ankieta');
+$host = 'localhost';
+$user = '';
+$pass = '';
+$dbname = 'db_ankieta';
 
+$con = mysqli_connect($host,$user,$pass,$dbname);
+
+if(!$link){
+    die('Ie mozna polaczyc : '.mysqli_error());
+}
+$db_select = mysqli_select_db($dbname);
+if(!$db_select){
+    die('Cant use '.$dbname.mysqli_error());
+}
 // get the post records
-$age = $_POST['age'];
+$wiek = $_POST['wiek'];
     $plec = $_POST['plec'];
     $zawod = $_POST['zawod'];
     $wyksztalcenie = $_POST['wyksztalcenie'];
@@ -16,22 +28,11 @@ $age = $_POST['age'];
     $czy_prywatny = $_POST['czy_prywatny'];
 
 // database insert SQL code
-$sql = "INSERT INTO `tbl_ankieta` ('id','fldwek','fldplec','fldzawod','fldwyksztalcenie','fldzamieszkanie','fldczy_wizyta','fldjak_czesto','fldczy_NFZ','fldczy_prywatny') VALUES ('0',  '$age', 
-'$plec',
-'$zawod', 
-'$wyksztalcenie', 
-'$zamieszkanie',
-'$czy_wizyta', 
-'$jak_czesto', 
-'$czy_NFZ', 
-'$czy_prywatny')";
+$query = "INSERT INTO `tbl_ankieta` (`id`, `plec`, `wiek`, `zawod`, `wyksztalcenie`, `zamieszkanie`, `czy_wizyta`, `jak_czesto`, `czy_NFZ`, `czy_prywatny`) VALUES (NULL, $plec,$wiek,$zawod,$wyksztalcenie,$zamieszkanie,$czy_wizyta,$jak_czesto,$czy_NFZ,$czy_prywatny);";
 
-// insert in database 
-$rs = mysqli_query($con, $sql);
+if(!mysqli_query($query)){
+    die(":(");
+}else{echo ":)";}
 
-if($rs)
-{
-	echo "Contact Records Inserted";
-}
-
+mysqli_close();
 ?>
