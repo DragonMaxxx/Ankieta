@@ -51,6 +51,7 @@
     margin-right : 10px;
     padding:0px;
 }
+.form-radio
 .tickmarks{
     display: inline-block;
 }
@@ -72,7 +73,7 @@
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbbbbb;
+    background-color: #3e0101;
     border: none;
     border-radius: 50%;
     display: inline-block;
@@ -92,3 +93,18 @@
     width: 70%;
     min-width: 300px;
   }
+  
+  .container {
+    border: solid 1px #ff0000;
+    zoom: 1; /* IE6&7 */
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}

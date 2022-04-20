@@ -3,16 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}" type="text/css">
     <title>Ankieta</title>
 </head>
 <body>
-    <form id="regForm" action="">
+    <form id="regForm" action="ankieta.php" method="post">
+      <style>
+        .form-all:before { background: none;}
+      </style>
         <div class="tab"> Identyfikacja:
-              <ul style="list-style-type:none;">
-              <li class="form-line" data-type="control" id="id_1">
+              <ul>
+              <li class="" data-type="control" id="id_1">
                 <label class="form-line-label" id="label_1" for="input_1"><strong> Wiek</strong> </label>
-                <div id="cid_1" class="form-input" data-layout="full">
+                <div id="cid_1" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_1" data-component="radio">                    
                       <input type="radio" aria-describedby="label_1" class="form-radio" id="input_1_0" name="age" value="Ponizej 18" />
                       <label id="label_input_1_0" for="input_1_0"> Ponizej 18 </label><br>
@@ -25,9 +28,9 @@
                   </div>
                 </div>
               </li>
-              <li class="form-line" data-type="control" id="id_2">
+              <li class="" data-type="control" id="id_2">
                 <label class="form-line-label" id="label_2" for="input_2"><strong>Plec</strong>  </label>
-                <div id="cid_2" class="form-input" data-layout="full">
+                <div id="cid_2" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_2" data-component="radio">                    
                       <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="pleć" value="Kobieta" />
                       <label id="label_input_2_0" for="input_2_0"> Kobieta </label><br>
@@ -40,9 +43,9 @@
                   </div>
                 </div>
               </li>
-              <li class="form-line" data-type="control" id="id_3">
+              <li class="" data-type="control" id="id_3">
                 <label class="form-line-label" id="label_3" for="input_3"><strong> Jaki jest twój status zawodowy?</strong> </label>
-                <div id="cid_3" class="form-input" data-layout="full">
+                <div id="cid_3" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_3" data-component="radio">                    
                       <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_0" name="zawod" value="Pracujący" />
                       <label id="label_input_3_0" for="input_3_0"> Pracujący </label><br>
@@ -54,9 +57,9 @@
                       <label id="label_input_3_3" for="input_3_3"> Emeryt </label><br>
                       <input type="radio" aria-describedby="label_3" class="form-radio" id="input_3_4" name="zawod" value="Student" />
                       <label id="label_input_3_4" for="input_3_4"> Student </label><br>
-              <li class="form-line" data-type="control" id="id_4">
+              <li class="" data-type="control" id="id_4">
                 <label class="form-line-label" id="label_4" for="input_4"> <strong>Wykształcenie</strong></label>
-                <div id="cid_4" class="form-input" data-layout="full">
+                <div id="cid_4" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_4" data-component="drop-down">
                       <select name="wyksztalcenie">
                         <option value="brak" selected="selected">Brak</option>
@@ -65,9 +68,9 @@
                         <option value="wyższe">Wyższe</option>
                       </select>
               </li>
-              <li class="form-line" data-type="control" id="id_5">
+              <li class="" data-type="control" id="id_5">
                 <label class="form-line-label" id="label_5" for="input_5"><strong>Zamieszkanie</strong></label>
-                <div id="cid_5" class="form-input" data-layout="full">
+                <div id="cid_5" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_5" data-component="drop-down">
                       <select name="zamieszkanie">
                         <option value="brak" selected="selected">Brak</option>
@@ -82,9 +85,9 @@
               </li>
               </ul>
         </div>
-        <div class="tab" style="display: none;">
+        <div class="tab">
           <label class="form-line-label" data-type="control" id="id_6"><strong>Czy korzysta Pan/Pani z wizyt lekarskich?</strong></label>
-          <div id="cid_6" class="form-input" data-layout="full">
+          <div id="cid_6" class="container" data-layout="full">
             <div class="form-single-column" role="group" aria-labelledby="label_6" data-component="radio">
               <input type="radio" aria-describedby="label_6" class="form-radio" id="input_6_0" name="czy_wizyta" value="Tak" />
                       <label id="label_input_6_0" for="input_6_0"> Tak </label>
@@ -93,25 +96,25 @@
           </div>
           </div>       
         </div>
-        <div class="tab" style="display: none;">
-          <ul style="list-style-type:none;">
+        <div class="tab">
+          <ul style="">
             <li class="" data-type="control" id="id_7">
               <label class="form-line=label" id="label_7" for="input_7"><strong>Jak często w skali od 1 do 5?</strong></label>
-              <div id="cid_7" class="form-input" data-layout="full">
+              <div id="cid_7" class="container" data-layout="full">
                 <div class="range-wrap" role="group" aria-labelledby="label_7" data-component="range">
-                  <div class="range-value" id="rangeV"></div>
+                  <div class="range-value_7" id="range_7" name="jak_czesto"></div>
                   <label>prawie wcale</label>
-                  <input id="range" type="range" min="1" max="5" value="3" step="1">
+                  <input id="input_7" name="jak_czesto" type="range" min="1" max="5" value="3" step="1">
                   <label>bardzo często</label>
                 </li>
-                <li>
+                <li data-type="control" id="id_8">
                   <label class="form-line=label" id="label_8" for="input_8"><strong>Czy korzysta Pan/Pani z NFZ?</strong></label>
                   <input type="radio" aria-describedby="label_8" class="form-radio" id="input_8_0" name="czy_NFZ" value="Tak" />
                   <label id="label_input_8_0" for="input_8_0"> Tak </label>
                   <input type="radio" aria-describedby="label_8" class="form-radio" id="input_8_1" name="czy_NFZ" value="Nie" />
                   <label id="label_input_8_1" for="input_8_1"> Nie </label>
                 </li>
-                <li>
+                <li data-type="control" id="id_9">
                   <label class="form-line=label" id="label_9" for="input_9"><strong>Czy korzysta Pan/Pani z usług lekarza prywatnego?</strong></label>
                   <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_0" name="czy_prywatny" value="Tak" />
                       <label id="label_input_9_0" for="input_9_0"> Tak </label>
@@ -124,7 +127,7 @@
           </ul>
         </div>
         <div class="tab" style="display: none;">
-          <ul style="list-style-type:none;">
+          <ul style="">
             <li>
               <label class="form-line=label" id="label_10" for="input_10"><strong>W jakiej dziedzinie spotkał/a się Pan/Pani z największą innowacyjnością w medycynie?</strong></label><br>
               <input type="checkbox" id="gdzie_innowacja_1" name="gdzie_innowacja_1" value="Dziedzina_leczenia">
@@ -149,77 +152,9 @@
         </div>
     </form>
 
-    <script src="javaScript.js"></script>
+   
 
-<script>var currentTab = 0; 
-  showTab(currentTab); 
-  
-  function showTab(n) {
-    var x = document.getElementsByClassName("tab");
-    x[n].style.display = "block";
-    if (n == 0) {
-      document.getElementById("prevBtn").style.display = "none";
-    } else {
-      document.getElementById("prevBtn").style.display = "inline";
-    }
-    if (n == (x.length - 1)) {
-      document.getElementById("nextBtn").innerHTML = "Submit";
-    } else {
-      document.getElementById("nextBtn").innerHTML = "Next";
-    }
-    fixtabIndicator(n)
-  }
-  
-  function nextPrev(n) {
-   
-    var x = document.getElementsByClassName("tab");
-    
-    if (n == 1 && !validateForm()) return false;
-    
-    x[currentTab].style.display = "none";
-    
-    currentTab = currentTab + n;
-   
-    if (currentTab >= x.length) {
-     
-      document.getElementById("regForm").submit();
-      return false;
-    }
-   
-    showTab(currentTab);
-  }
-  
-  function validateForm() {
-   
-    var x, y, i, valid = true;
-    x = document.getElementsByClassName("tab");
-    y = x[currentTab].getElementsByTagName("input");
-   
-    for (i = 0; i < y.length; i++) {
-     
-      if (y[i].value == "") {
-        
-        y[i].className += " invalid";
-        
-        valid = false;
-      }
-    }
-   
-    if (valid) {
-      document.getElementsByClassName("step")[currentTab].className += " finish";
-    }
-    return valid; 
-  }
-  
-  function fixtabIndicator(n) {
-    
-    var i, x = document.getElementsByClassName("step");
-    for (i = 0; i < x.length; i++) {
-      x[i].className = x[i].className.replace(" active", "");
-    }
-    
-    x[n].className += " active";
-  }</script>
+    <script src="{{ url_for('static',filename='javaScript.js') }}"> </script>
   
 </body>
 </html>
