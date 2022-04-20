@@ -7,7 +7,7 @@
     <title>Ankieta</title>
 </head>
 <body>
-    <form id="regForm" action="ankieta.php" method="post">
+    <form id="regForm" action="" method="post">
       <style>
         .form-all:before { background: none;}
       </style>
@@ -32,13 +32,13 @@
                 <label class="form-line-label" id="label_2" for="input_2"><strong>Plec</strong>  </label>
                 <div id="cid_2" class="container" data-layout="full">
                   <div class="form-single-column" role="group" aria-labelledby="label_2" data-component="radio">                    
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="pleć" value="Kobieta" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_0" name="plec" value="Kobieta" />
                       <label id="label_input_2_0" for="input_2_0"> Kobieta </label><br>
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_1" name="pleć" value="Mężczyzna" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_1" name="plec" value="Mężczyzna" />
                       <label id="label_input_2_1" for="input_2_1"> Mężczyzna </label><br>
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_2" name="pleć" value="Inna" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_2" name="plec" value="Inna" />
                       <label id="label_input_2_2" for="input_2_3"> Inna </label><br>
-                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_3" name="pleć" value="Wole nie odpowiadać" />
+                      <input type="radio" aria-describedby="label_2" class="form-radio" id="input_2_3" name="plec" value="Wole nie odpowiadać" />
                       <label id="label_input_2_3" for="input_2_3"> Wole nie odpowiadać </label><br>
                   </div>
                 </div>
@@ -120,25 +120,13 @@
                       <label id="label_input_9_0" for="input_9_0"> Tak </label>
                       <input type="radio" aria-describedby="label_9" class="form-radio" id="input_9_1" name="czy_prywatny" value="Nie" />
                       <label id="label_input__1" for="input_9_1"> Nie </label>
-                </li>     
+                </li>  
                 </div>
               </div>
             </li>
           </ul>
         </div>
-        <div class="tab" style="display: none;">
-          <ul style="">
-            <li>
-              <label class="form-line=label" id="label_10" for="input_10"><strong>W jakiej dziedzinie spotkał/a się Pan/Pani z największą innowacyjnością w medycynie?</strong></label><br>
-              <input type="checkbox" id="gdzie_innowacja_1" name="gdzie_innowacja_1" value="Dziedzina_leczenia">
-              <label for="gdzie_innowacja_1"> Dziedzina leczenia</label><br>
-              <input type="checkbox" id="gdzie_innowacje_2" name="gdzie_innowacje_2" value="Infrastruktura_diagnostyczna">
-              <label for="gdzie_innowacje_2"> Infrastruktura diagnostyczna</label><br>
-              <input type="checkbox" id="gdzie_innowacje_3" name="gdzie_innowacje_3" value="profilaktyka_promocja_tele">
-              <label for="gdzie_innowacje_3"> Profilaktyka i promocja zdrowia z wykorzytniem rozwiązań teleinformatycznych</label><br>
-            </li>
-          </ul>
-        </div>
+       
         <div style="overflow:auto;">
           <div style="float:right;">
             <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
